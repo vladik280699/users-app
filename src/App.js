@@ -1,9 +1,13 @@
 import React from 'react'
 
-import './App.css'
+import Header from './components/Header/Header'
+import './App.scss'
 
 function App() {
-  return <div className="App">Users app</div>
+  return <div className="App">
+    <Header/>
+    Users app
+  </div>
 }
 
 export default App
