@@ -1,12 +1,16 @@
 import React from 'react'
 
 import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 import './App.scss'
 
 function App() {
   return <div className="App">
     <Header/>
-    Users app
+    <div className="Content">
+      Users app
+    </div>
+    <Footer/>
   </div>
 }
 

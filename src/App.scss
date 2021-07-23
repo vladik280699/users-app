@@ -1,3 +1,9 @@
 .App {
   background: #fefbe9;
 }
+
+.Content {
+  width: 100%;
+  height: calc(100vh - 200px);
+  overflow: auto;
+}
