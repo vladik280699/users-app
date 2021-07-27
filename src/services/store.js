@@ -19,18 +19,30 @@ export const usersFetchRequest = createAction('USERS_GET_REQUESTED', undefined)(
 export const usersFetchSuccess = createAction('USERS_GET_SUCCEEDED')()
 export const usersFetchFailure = createAction('USERS_GET_GET_FAILED')()
 
+export const setUserStatusById = createAction('SET_USER_STATUS_BY_ID', (id, status) => ({id, status}))()
+
 // reducer
 
 const reducer = createReducer(initialState)
   .handleAction(usersFetchSuccess, (state, {payload}) => {
-
     const {byId, ids} = groupById(payload, 'login.uuid')
+
     return {
       ...state,
       byId,
       ids,
     }
   })
+  .handleAction(setUserStatusById, (state, {payload: {id, status}}) => ({
+    ...state,
+    byId: {
+      ...state.byId,
+      [id]: {
+        ...state.byId[id],
+        checked: status
+      }
+    },
+  }))
 
 // store
 
@@ -49,11 +61,18 @@ export const getUsers = createSelector(usersById, usersIds, (byId, ids) =>
   ids.map((id) => byId[id])
 )
 
+export const getCheckedUsers = createSelector(getUsers, (users) => users.filter((user) => user.checked)
+)
+
 // redux-saga
 function* workerGetUsers() {
-  const data = yield call(fetchUsers)
+  try {
+    const data = yield call(fetchUsers)
 
-  yield put(usersFetchSuccess(data.results))
+    yield put(usersFetchSuccess(data.results))
+  } catch (err) {
+    yield put(usersFetchFailure())
+  }
 }
 
 export function* watchGetUsers() {

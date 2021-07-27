@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7531263-8118-4c98-8ab3-e2adf33e29d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/UsersListPage/UsersListPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/UsersListPage/UsersListPage.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/UsersListPage/components/User.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/collections.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/UsersListPage/UsersListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/UsersListPage/UsersListPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/UsersListPage/UsersListPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/UsersListPage/UsersListPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/UsersListPage/components/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/UsersListPage/components/User.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -109,6 +104,7 @@
     <MESSAGE value="set up environment" />
     <MESSAGE value="add header" />
     <MESSAGE value="add footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="add footer" />
+    <MESSAGE value="add users page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add users page" />
   </component>
 </project>
