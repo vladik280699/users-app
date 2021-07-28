@@ -10,6 +10,7 @@ import {groupById} from '../utils/collections'
 const initialState = {
   byId: {},
   ids: [],
+  searchText: '',
 }
 
 // actions
@@ -20,6 +21,7 @@ export const usersFetchSuccess = createAction('USERS_GET_SUCCEEDED')()
 export const usersFetchFailure = createAction('USERS_GET_GET_FAILED')()
 
 export const setUserStatusById = createAction('SET_USER_STATUS_BY_ID', (id, time) => ({id, time}))()
+export const setSearchText = createAction('SET_SEARCH_TEXT', (text) => text)()
 
 // reducer
 
@@ -43,6 +45,10 @@ const reducer = createReducer(initialState)
       }
     },
   }))
+  .handleAction(setSearchText, (state, {payload}) => ({
+    ...state,
+    searchText: payload.toLowerCase(),
+  }))
 
 // store
 
@@ -56,6 +62,7 @@ sagaMiddleware.run(watchGetUsers)
 
 const usersById = (state) => state.byId
 const usersIds = (state) => state.ids
+export const getSearchText = (state) => state.searchText
 
 export const getUsers = createSelector(usersById, usersIds, (byId, ids) =>
   ids.map((id) => byId[id])
