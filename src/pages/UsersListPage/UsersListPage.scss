@@ -26,3 +26,22 @@
   font-weight: bold;
   text-transform: uppercase;
 }
+
+.Button {
+  width: 160px;
+  background: #e1eedd;
+  border: 0;
+  border-radius: 15px;
+
+  &.active {
+    background: #183a1d;
+    color: #fff;
+  }
+}
+
+.HelperText {
+  font-size: 11px;
+  height: 16px;
+  text-align: center;
+  color: #fefbe9;
+}

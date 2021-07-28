@@ -5,11 +5,11 @@ import {useDispatch} from 'react-redux'
 import '../UsersListPage.scss'
 import {setUserStatusById} from '../../../services/store'
 
-function User({imageSrc, fistName, lastName, id, checked}) {
+function User({imageSrc, fistName, lastName, id, checkedAt}) {
   const dispatch = useDispatch()
 
   const handleChange = () => {
-    dispatch(setUserStatusById(id, !checked))
+    dispatch(setUserStatusById(id, checkedAt ? undefined : new Date()))
   }
 
   return <div className="User">
@@ -19,14 +19,14 @@ function User({imageSrc, fistName, lastName, id, checked}) {
     <div className="Name">
       <span>{`${fistName} ${lastName}`}</span>
     </div>
-    <div className="">
-      <input
-        type="checkbox"
-        id={id}
-        name={id}
-        onChange={handleChange}
-        checked={checked}
-      />
+    <div>
+      <button
+        onClick={handleChange}
+        className={`Button ${checkedAt? 'active' : ''}`}
+      >
+        {checkedAt? 'deactivate' : 'activate'}
+      </button>
+      <div className="HelperText">{checkedAt ? `${checkedAt.getHours()}:${checkedAt.getMinutes()}` : null}</div>
     </div>
   </div>
 }
@@ -36,7 +36,10 @@ User.propTypes = {
   imageSrc: PropTypes.string,
   fistName: PropTypes.string,
   lastName: PropTypes.string,
-  checked: PropTypes.bool,
+  checkedAt: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.any,
+  ])
 }
 
 export default User

@@ -20,18 +20,18 @@ function UsersListPage() {
     <Tabs selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
       <TabList>
         <Tab>Users</Tab>
-        <Tab>Checked users</Tab>
+        <Tab>Active users</Tab>
       </TabList>
       <TabPanel>
         <div className="List">
           {users.map((user) => (
             <User
-              key={user.login.uuid}
-              id={user.login.uuid}
+              key={user.id.value}
+              id={user.id.value}
               imageSrc={user.picture.medium}
               fistName={user.name.first}
               lastName={user.name.last}
-              checked={!!user.checked}
+              checkedAt={user.checkedAt}
             />
           ))}
         </div>
@@ -40,12 +40,12 @@ function UsersListPage() {
         <div className="List">
           {users.map((user) => (
             <User
-              key={user.login.uuid}
-              id={user.login.uuid}
+              key={user.id.value}
+              id={user.id.value}
               imageSrc={user.picture.medium}
               fistName={user.name.first}
               lastName={user.name.last}
-              checked={!!user.checked}
+              checkedAt={user.checkedAt}
             />
           ))}
         </div>

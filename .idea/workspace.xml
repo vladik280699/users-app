@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7531263-8118-4c98-8ab3-e2adf33e29d4" name="Default Changelist" comment="">
+    <list default="true" id="f7531263-8118-4c98-8ab3-e2adf33e29d4" name="Default Changelist" comment="add information about user activation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/UsersListPage/UsersListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/UsersListPage/UsersListPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/UsersListPage/UsersListPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/UsersListPage/UsersListPage.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/UsersListPage/components/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/UsersListPage/components/User.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +37,7 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="F:\Web_developer\React_apps\users-app\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vcs.patch.path" value="$USER_HOME$/Desktop" />
   </component>
   <component name="RecentsManager">
@@ -105,6 +104,7 @@
     <MESSAGE value="add header" />
     <MESSAGE value="add footer" />
     <MESSAGE value="add users page" />
-    <option name="LAST_COMMIT_MESSAGE" value="add users page" />
+    <MESSAGE value="add the ability to choose user" />
+    <option name="LAST_COMMIT_MESSAGE" value="add the ability to choose user" />
   </component>
 </project>

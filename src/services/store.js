@@ -19,13 +19,13 @@ export const usersFetchRequest = createAction('USERS_GET_REQUESTED', undefined)(
 export const usersFetchSuccess = createAction('USERS_GET_SUCCEEDED')()
 export const usersFetchFailure = createAction('USERS_GET_GET_FAILED')()
 
-export const setUserStatusById = createAction('SET_USER_STATUS_BY_ID', (id, status) => ({id, status}))()
+export const setUserStatusById = createAction('SET_USER_STATUS_BY_ID', (id, time) => ({id, time}))()
 
 // reducer
 
 const reducer = createReducer(initialState)
   .handleAction(usersFetchSuccess, (state, {payload}) => {
-    const {byId, ids} = groupById(payload, 'login.uuid')
+    const {byId, ids} = groupById(payload, 'id.value')
 
     return {
       ...state,
@@ -33,13 +33,13 @@ const reducer = createReducer(initialState)
       ids,
     }
   })
-  .handleAction(setUserStatusById, (state, {payload: {id, status}}) => ({
+  .handleAction(setUserStatusById, (state, {payload: {id, time}}) => ({
     ...state,
     byId: {
       ...state.byId,
       [id]: {
         ...state.byId[id],
-        checked: status
+        checkedAt: time
       }
     },
   }))
@@ -61,7 +61,7 @@ export const getUsers = createSelector(usersById, usersIds, (byId, ids) =>
   ids.map((id) => byId[id])
 )
 
-export const getCheckedUsers = createSelector(getUsers, (users) => users.filter((user) => user.checked)
+export const getCheckedUsers = createSelector(getUsers, (users) => users.filter((user) => user.checkedAt)
 )
 
 // redux-saga
